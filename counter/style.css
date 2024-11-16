@@ -1,0 +1,30 @@
+.counter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+h1 {
+    font-weight: bolder;
+    font-size: 3rem;
+    margin-bottom: 5px;
+}
+
+button {
+    color: black;
+    font-size: 1rem;
+    padding: 10px 15px;
+    background-color: aqua;
+    border-width: 1px;
+    border-radius: 5px;
+}
+
+.buttons>button {
+    margin-right: 5px;
+}
+
+input {
+    font-size: 1rem;
+}
