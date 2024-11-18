@@ -1,0 +1,27 @@
+body {
+    background-color: #f3f4f6;
+}
+
+.container {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    width: 500px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+}
+
+.container>input {
+    padding: 5px;
+    font-size: 18px;
+    width: 400px;
+}
+
+.container>p {
+    font-size: 20px;
+}
