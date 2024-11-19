@@ -5,7 +5,6 @@ const circleContainer = document.querySelector('.circle-container')
 const handleSubmit = (e) => {
     e.preventDefault()
     const inputNumber = inputEl.value
-
     const matchingCircle = circleContainer.querySelector(`.circle[data-number="${inputNumber}"]`)
 
     if (matchingCircle && !matchingCircle.classList.contains('active')) {
@@ -15,7 +14,6 @@ const handleSubmit = (e) => {
         }
         matchingCircle.classList.add('active')
     }
-
 }
 
 form.addEventListener('submit', handleSubmit)
