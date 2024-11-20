@@ -1,0 +1,62 @@
+.container {
+    width: 400px;
+    height: 300px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+#form {
+    margin-top: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+input,
+select {
+    padding: 10px 15px;
+    font-size: 17px;
+    width: 100%;
+}
+
+#message {
+    max-width: 270px;
+}
+
+#form>.duration-wrapper {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 10px;
+}
+
+#form>button {
+    width: 100px;
+    padding: 10px;
+    background-color: aqua;
+    border: 0.5px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#toast {
+    display: none;
+    position: fixed;
+    min-width: 50px;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+#toast i {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#toast.active {
+    display: flex;
+}
