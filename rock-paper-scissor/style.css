@@ -1,0 +1,52 @@
+body {
+    text-align: center;
+}
+
+.game {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+}
+
+#human,
+#bot {
+    width: 200px;
+}
+
+#bot {
+    display: none;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+img {
+    cursor: pointer;
+    height: 100px;
+    margin: 10px;
+}
+
+#result {
+    margin-top: 50px;
+    text-align: center;
+    font-weight: bolder;
+    font-size: 25px;
+}
+
+#result-table {
+    margin-top: 20px;
+    display: none;
+    justify-content: center;
+}
+
+#result-table table th {
+    padding: 10px;
+}
+
+#reset-btn {
+    margin-top: 10px;
+    padding: 10px;
+}
