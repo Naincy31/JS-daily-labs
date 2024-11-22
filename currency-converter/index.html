@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Currency Converter</title>
+</head>
+
+<body>
+    <div class="container">
+        <form id="form">
+            <input type="number" min="0" id="input-amount" required>
+            <select name="curr" id="present-curr">
+                <option value="USD" selected>USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="INR">INR</option>
+            </select>
+            <input type="number" id="output-amount" disabled>
+            <select name="curr" id="convert-to-curr">
+                <option value="USD" selected>USD</option>
+                <option value="EUR">EUR</option>
+                <option value="GBP">GBP</option>
+                <option value="INR">INR</option>
+            </select>
+            <button type="submit" id="convert-curr">Convert</button>
+            <input type="text" placeholder="Custom Currency(e.g., CAI)" id="custom-curr">
+            <button id="add-curr">Add Currency</button>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
