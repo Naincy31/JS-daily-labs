@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Bill Split</title>
+</head>
+
+<body>
+    <div class="container">
+        <div id="get-bill">
+            <div class="input-container">
+                <label for="amount">Bill</label>
+                <div class="amount-container">
+                    <span>&#8377;</span>
+                    <input type="number" id="amount" name="amount">
+                </div>
+            </div>
+            <div class="tip-container">
+                <label for="tip">Select Tip</label>
+                <div class="btn-tip">
+                    <button disabled>5%</button>
+                    <button disabled>10%</button>
+                    <button disabled>15%</button>
+                    <button disabled>25%</button>
+                    <button disabled>50%</button>
+                    <button disabled>75%</button>
+                </div>
+            </div>
+            <div class="custom-tip">
+                <input type="number" id="custom-tip" placeholder="Custom Tip" disabled>
+            </div>
+            <div class="people-container">
+                <label for="people">Number Of People</label>
+                <input type="number" id="people" placeholder="No of people" disabled>
+            </div>
+            <button id="generate-bill" disabled>Generate Bill</button>
+        </div>
+        <div id="display-bill">
+            <div class="tip-amount">
+                <h4>Tip amount</h4>
+                <span class="tip-value"></span>
+            </div>
+            <div class="total-bill">
+                <h4>Total</h4>
+                <span class="total-value"></span>
+            </div>
+            <div class="split-bill">
+                <h4>Each Person Bill</h4>
+                <span class="pp-value"></span>
+            </div>
+            <button id="reset" disabled>Reset</button>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
