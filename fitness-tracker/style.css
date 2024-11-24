@@ -1,0 +1,120 @@
+body {
+    background-color: #F5F5F5;
+}
+
+body.light-mode {
+    background-color: rgb(240, 240, 240);
+}
+
+body.dark-mode {
+    background-color: #222222;
+}
+
+.container {
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    width: 600px;
+    margin: auto;
+    min-height: 100%;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.container.dark-mode {
+    background-color: #333;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    color: white;
+}
+
+#mode-toggle {
+    border-radius: 50%;
+    background-color: rgb(51, 51, 51);
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+#mode-toggle.light {
+    background-color: #fff;
+    color: rgb(51, 51, 51);
+}
+
+#mode-toggle.dark:hover {
+    background-color: rgb(51, 51, 51, 0.7);
+}
+
+#form-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+#form-container>label {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#form-container>input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #CECECE;
+}
+
+#form-container>button {
+    background-color: rgb(0, 123, 255);
+    border: none;
+    width: 10%;
+    padding: 10px;
+    border-radius: 5px;
+    place-self: center;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#form-container>button:hover {
+    background-color: #0056b3;
+}
+
+
+#workouts {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+#workouts>* {
+    margin: 20px 0;
+    display: flex;
+    padding: 10px;
+    background-color: #F5F5F5;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#delete {
+    border: none;
+    background-color: rgb(231, 76, 60);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+#delete:hover {
+    background-color: #c0392b;
+}
+
+p {
+    color: red
+}
+
+.container.dark-mode #workouts>li {
+    background-color: #444;
+}
