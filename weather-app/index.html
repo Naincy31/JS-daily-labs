@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Weather App</title>
+</head>
+
+<body>
+    <div class="weather-container">
+        <h2>CHECK THE WEATHER!!</h2>
+        <form id="search">
+            <input type="text" placeholder="Enter city name">
+            <button><i class="fa fa-search"></i></button>
+        </form>
+        <div class="error">
+            <p>INVALID CITY NAME!!</p>
+        </div>
+        <div class="weather">
+            <img src="" alt="weather">
+            <h2 class="temp"></h2>
+            <h3 class="city"></h3>
+            <div class="details">
+                <div class="humidity-details">
+                    <img src="./images/humidity.png" alt="humid">
+                    <div>
+                        <p class="humidity"></p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="wind-details">
+                    <img src="./images//wind.png" alt="wind">
+                    <div>
+                        <p class="wind"></p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
