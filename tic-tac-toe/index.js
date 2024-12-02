@@ -16,6 +16,10 @@ const winPatterns = [
     [2, 5, 8], //third col
 ]
 
+const xAudio = new Audio("./sounds/xTone.mp3")
+const oAudio = new Audio("./sounds/oTone.mp3")
+const winAudio = new Audio("./sounds/win.mp3")
+
 const handleSquareClick = (e) => {
     const clickedBox = e.target
     const clickedBoxIndex = Array.from(squares).indexOf(clickedBox)
@@ -23,10 +27,18 @@ const handleSquareClick = (e) => {
 
     if (board[clickedBoxIndex] !== "" || !gameActive) return
 
+    currentPlayer === 'X' ? xAudio.play() : oAudio.play()
+
     board[clickedBoxIndex] = currentPlayer
     clickedBox.textContent = currentPlayer
 
     if (checkWinner()) {
+        winAudio.play()
+
+        setTimeout(() => {
+            winAudio.pause()
+            winAudio.currentTime = 0
+        }, 1000)
         alert(`${currentPlayer} wins!`)
         gameActive = false
         return
@@ -49,6 +61,7 @@ const checkWinner = () => {
 }
 
 const resetGame = () => {
+    winAudio.pause()
     currentPlayer = 'X'
     gameActive = true
     board = Array(9).fill("")
