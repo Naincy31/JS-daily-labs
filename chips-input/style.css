@@ -1,0 +1,42 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    margin-top: 20px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+#form {
+    width: 80%;
+    place-self: center;
+}
+
+input {
+    width: 100%;
+    padding: 8px 15px;
+    font-size: 15px;
+}
+
+.chips {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.chip {
+    background-color: #eee;
+    padding: 10px 15px;
+    border-radius: 15px;
+    border: 1px solid #d3d3dd;
+}
+
+.delete {
+    color: red;
+    border: none;
+}
