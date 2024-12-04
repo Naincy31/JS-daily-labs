@@ -9,14 +9,21 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container text-center">
         <form id="form">
-            <input type="text" placeholder="Type & hit Enter">
+            <input type="text" id="userInput" autocomplete="off" placeholder="Type & hit Enter" />
         </form>
-        <div class="chips"></div>
-    </div>
 
+        <div class="chips-display"></div>
+    </div>
+    <template id="chipTemplate">
+        <div class="chip">
+            <span class="chip-name"></span>
+            <button class="remove">&#x2715;</button>
+        </div>
+    </template>
     <script src="index.js"></script>
 </body>
+
 
 </html>
