@@ -4,8 +4,52 @@ const buttonsContainer = document.querySelector('.buttons')
 
 let inputEquation = ''
 let outputValue = null
-let operation = []
-const delimeters = '/[+\-\/x]'
+let operations = []
+let bodmassValue = null
+const delimeters = /[+\-\/x]/
+
+//12+3-9/2x8
+//operations: [+, -, /, x]
+//inputEqwith = [12, 3, 9, 2, 8]
+
+const calculateBodmass = () => {
+    inputEqwithoutOperations = inputEquation.split(delimeters).map(Number)
+    console.log('Numbers without operations: ', inputEqwithoutOperations);
+    console.log('operations: ', operations);
+
+    let i = 0
+    while (i < operations.length) {
+        console.log('inside x / loop');
+
+        if (operations[i] === 'x' || operations[i] === '/') {
+            const result =
+                operations[i] === 'x'
+                    ? inputEqwithoutOperations[i] * inputEqwithoutOperations[i + 1]
+                    : inputEqwithoutOperations[i] / inputEqwithoutOperations[i + 1]
+
+            inputEqwithoutOperations.splice(i, 2, result)
+            operations.splice(i, 1)
+        } else {
+            i++
+        }
+    }
+
+    i = 0
+    while (i < operations.length) {
+        console.log('inside + - loop');
+        const result =
+            operations[i] === '+'
+                ? inputEqwithoutOperations[i] + inputEqwithoutOperations[i + 1]
+                : inputEqwithoutOperations[i] - inputEqwithoutOperations[i + 1]
+
+        inputEqwithoutOperations.splice(i, 2, result)
+        operations.splice(i, 1)
+    }
+
+    bodmassValue = inputEqwithoutOperations[0]
+    console.log("Final Result: ", bodmassValue)
+
+}
 
 const determineInput = (e) => {
     const input = e.target.dataset.value
@@ -24,7 +68,7 @@ const determineInput = (e) => {
         case '/':
             if (inputEquation && !isLastCharacterOperator()) {
                 inputEquation = inputEquation.concat(input)
-                operation.push(input)
+                operations.push(input)
                 updateInputDisplay()
             }
             break;
@@ -53,12 +97,16 @@ const clearFields = () => {
     updateInputDisplay()
     outputEl.hidden = true
     inputEl.style.fontSize = '25px'
+    operations = []
+    bodmassValue = null
 }
 
 const calculateOutput = () => {
     if (!inputEquation || isLastCharacterOperator()) {
         return alert('Invalid equation')
     }
+
+    calculateBodmass()
 
     try {
         const sanitizedEquation = inputEquation.replace(/x/g, '*')
@@ -75,3 +123,4 @@ const calculateOutput = () => {
 }
 
 buttonsContainer.addEventListener('click', determineInput)
+
