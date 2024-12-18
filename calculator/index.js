@@ -8,18 +8,11 @@ let operations = []
 let bodmassValue = null
 const delimeters = /[+\-\/x]/
 
-//12+3-9/2x8
-//operations: [+, -, /, x]
-//inputEqwith = [12, 3, 9, 2, 8]
-
 const calculateBodmass = () => {
     inputEqwithoutOperations = inputEquation.split(delimeters).map(Number)
-    console.log('Numbers without operations: ', inputEqwithoutOperations);
-    console.log('operations: ', operations);
 
     let i = 0
     while (i < operations.length) {
-        console.log('inside x / loop');
 
         if (operations[i] === 'x' || operations[i] === '/') {
             const result =
@@ -36,7 +29,7 @@ const calculateBodmass = () => {
 
     i = 0
     while (i < operations.length) {
-        console.log('inside + - loop');
+
         const result =
             operations[i] === '+'
                 ? inputEqwithoutOperations[i] + inputEqwithoutOperations[i + 1]
@@ -47,8 +40,6 @@ const calculateBodmass = () => {
     }
 
     bodmassValue = inputEqwithoutOperations[0]
-    console.log("Final Result: ", bodmassValue)
-
 }
 
 const determineInput = (e) => {
